@@ -1,11 +1,11 @@
-const routes= require('express').Router();
-const UserRoutes = require('./user_routes');
+const router= require('express').Router();
+const UserRoutes = require('./user_routes')(router);
 
-routes.use('/users' , UserRoutes);
+router.use('/users' , UserRoutes);
 // routes.use('/posts', PostRoutes);
 
 
-// send all otehr request to error not found
-routes.all('*', (req, res, next) => next());
+// send all other request to error not found
+router.all('*', (req, res, next) => next());
 
-module.exports = routes;
+module.exports = router;

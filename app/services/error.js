@@ -26,8 +26,3 @@ module.exports.critical = (err, req, res) => {
     status: HTTPStatus[500]
   });
 };
-
-
-
-
-// app.use();

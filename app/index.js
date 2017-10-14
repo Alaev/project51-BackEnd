@@ -27,12 +27,10 @@ if (!module.parent) {
       console.log(chalk.red('Cannot run!'));
     } else {
       console.log(
-        chalk.green.bold(
-          `
-        App runing on port: ${constants.PORT}
+        chalk.green.bold(`
+        App runing on port: http://localhost/${constants.PORT}
         Env: ${process.env.NODE_ENV}
-        `
-        )
+        `)
       );
     }
   });
